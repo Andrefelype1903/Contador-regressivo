@@ -30,12 +30,16 @@ body {
     background-size: auto;
 }
 
+body h2 {
+    margin-top: 2rem;
+}
+
 .contador {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.3rem;
-    margin: 5rem;
+    margin: 1rem 0 10rem;
 }
 
 .contador div {
