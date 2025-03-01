@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+:root {
+    --cor-branco: #e7e8dc;
+    --cor-rosa: #ae0464;
+    --cor-azul: #1d52a8;
+    --cor-roxo: #71056f;
+    --cor-verde: #1fe516;
+    --cor-preto: #191919;    
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(var(--cor-azul), var(--cor-preto)); */
+    color: var(--cor-branco);
+    background-image: url(../img/andre.jpeg);
+    background-position: center;
+    background-size: auto;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3rem;
+    margin: 5rem;
+}
+
+.contador div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador div p {
+    font-size: 2rem;
+}
+
+.contador div span {
+    font-size: 1rem;
+}
