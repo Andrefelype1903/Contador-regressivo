@@ -1,5 +1,5 @@
 
-const dataAlvo = new Date("Mar, 19, 2025 00:00:00").getTime();
+const dataAlvo = new Date("05, 19, 2025 00:00:00").getTime();
 
 const body = document.querySelector('body')
 
@@ -13,7 +13,7 @@ const intervalo = setInterval(() => {
   if(tempoRestante < 0) {
 
 
-    body.style.backgroundImage = 'url(./img/andre.jpeg)'
+    // body.style.backgroundImage = 'url(./img/andre.jpeg)'
 
 
     clearInterval(intervalo);

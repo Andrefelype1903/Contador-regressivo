@@ -25,7 +25,7 @@ body {
     justify-content: center;
     /* background: linear-gradient(var(--cor-azul), var(--cor-preto)); */
     color: var(--cor-branco);
-    background-image: url(../img/andre.jpeg);
+    background-color: var(--cor-preto);
     background-position: center;
     background-size: auto;
 }
