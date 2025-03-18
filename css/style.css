@@ -30,19 +30,95 @@ body {
     background-size: auto;
 }
 
-body h2 {
-    margin-top: 2rem;
+.grid-1 {
+    width: 100vw;
+    height: 40vh;
+    
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+    gap: 1px;
+}
+
+.parent div {
+    border-radius: 2px;
+    background-size: cover;
+    /* background-position: center; */
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    background-image: url(../img/6.jpg);
+}
+
+.div2 {
+    grid-column-start: 4;
+    background-image: url(../img/1.jpg);
+}
+
+.div3 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    background-image: url(../img/2.jpg);
+}
+
+.div4 {
+    grid-row-start: 3;
+    background-image: url(../img/3.jpg);
+
+}
+
+.div5 {
+    grid-row-start: 3;
+    background-image: url(../img/4.jpg);
+}
+
+.div6 {
+    grid-row-start: 3;
+    background-image: url(../img/5.jpg);
+    
+}
+
+.div7 {
+    grid-row-start: 3;
+    background-image: url(../img/7.jpg);
+    
+}
+        
+
+body h2, h1 {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contador {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 20vh;
     justify-content: center;
     gap: 1.3rem;
-    margin: 1rem 0 10rem;
+    margin-bottom: 5px;
+    /* background-image: url(../img/9.jpg);
+    background-size: cover; */
+
 }
 
-.contador div {
+.div-timer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.timer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,4 +131,12 @@ body h2 {
 
 .contador div span {
     font-size: 1rem;
+}
+
+.grid-2 {
+    height: 40vh;
+    width: 100%;
+    background-image: url(../img/9.jpg);
+    background-size: cover;
+    background-position: center;
 }

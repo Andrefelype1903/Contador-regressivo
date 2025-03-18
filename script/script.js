@@ -1,11 +1,11 @@
 
-const dataAlvo = new Date("05, 19, 2025 00:00:00").getTime();
+const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
 const body = document.querySelector('body')
 
 console.log(dataAlvo);
 
-const intervalo = setInterval(() => {
+const contagem = () => {
 
   const dataAtual = new Date().getTime();
   const tempoRestante = dataAlvo - dataAtual;
@@ -38,4 +38,13 @@ const intervalo = setInterval(() => {
   document.querySelector('#segundos').innerHTML = segundos
   document.querySelector('#dias').innerHTML = dias
 
+
+}
+
+contagem()
+
+const intervalo = setInterval(() => {
+
+  contagem()
+  
 }, 1000);
