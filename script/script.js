@@ -1,8 +1,8 @@
 const contador = document.querySelector('.contador')
 
-/* const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime(); */
+const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
-const dataAlvo = new Date("mar, 17, 2025 23:16:35").getTime();
+/* const dataAlvo = new Date("mar, 17, 2025 23:16:35").getTime(); */
 
 
 const body = document.querySelector('body')
