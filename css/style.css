@@ -36,7 +36,7 @@ body {
     
 }
 
-.parent {
+/* .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -88,7 +88,142 @@ body {
     grid-row-start: 3;
     background-image: url(../img/7.jpg);
     
+} */
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 100%;
+    gap: 1px;
 }
+
+.parent div {
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+} 
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.div1 .front {
+    background-image: url(../img/6.jpg);
+    transform: rotateY(180deg);
+    
+}
+
+.div1 .back {
+    background-image: url(../img/1.jpg);
+    backface-visibility: hidden;
+}
+
+/* .div1:hover {
+    transform: rotateY(180deg);
+} */
+
+.div2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 4;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.div2 .front {
+    background-image: url(../img/13.jpg);
+
+}
+
+.div2 .back {
+    background-image: url(../img/14.jpg);
+    backface-visibility: hidden;
+}
+
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    grid-row-start: 1;
+    background-image: url(../img/2.jpg);
+}
+
+.div4 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    background-image: url(../img/3.jpg);
+}
+
+.div5 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    background-image: url(../img/4.jpg);
+
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    background-image: url(../img/15.jpg);
+    transition: all 1s ease-in-out;
+}
+
+.div7 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    background-image: url(../img/7.jpg);
+
+}
+
+.div8 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    background-image: url(../img/8.jpg);
+}
+
+.div9 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    background-image: url(../img/9.jpg);
+}
+
+.div10 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+    background-image: url(../img/16.jpg);
+}
+
+.div11 {
+    grid-column-start: 4;
+    grid-row-start: 5;
+    background-image: url(../img/11.jpg);
+}
+
+.div12 {
+    grid-column-start: 5;
+    grid-row-start: 3;
+    background-image: url(../img/12.jpg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+}
+        
         
 
 body h2, h1 {
@@ -106,10 +241,17 @@ body h2, h1 {
     height: 30vh;
     justify-content: center;
     gap: 1.3rem;
+    position: relative;
 
     /* background-image: url(../img/9.jpg);
     background-size: cover; */
 
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .div-timer {

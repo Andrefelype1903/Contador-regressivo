@@ -1,9 +1,33 @@
 const contador = document.querySelector('.contador')
 
+const div1 = document.querySelector('.div1')
+const div2 = document.querySelector('.div2')
+const div6 = document.querySelector('.div6')
+
 const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
-/* const dataAlvo = new Date("mar, 17, 2025 23:16:35").getTime(); */
+// const dataAlvo = 2
 
+const animationImage = () => {
+
+  setTimeout(() => {
+
+    div1.style.transform = "rotateY(180deg)"
+
+  },5000)
+
+  setTimeout(() => {
+
+    div6.style.backgroundImage = "url(../img/5.jpg)"
+
+  },3000)
+
+  setTimeout(() => {
+    div2.style.transform = "rotateY(180deg)"
+  },7000)
+}
+
+animationImage()
 
 const body = document.querySelector('body')
 
@@ -57,7 +81,6 @@ const contagem = () => {
     document.querySelector('#segundos').innerHTML = segundos
     document.querySelector('#dias').innerHTML = dias
   }
-
 
 
 }
