@@ -3,6 +3,7 @@ const contador = document.querySelector('.contador')
 const div1 = document.querySelector('.div1')
 const div2 = document.querySelector('.div2')
 const div6 = document.querySelector('.div6')
+const div11 = document.querySelector('.div11')
 
 let vez = 0;
 
@@ -10,7 +11,7 @@ const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
 // const dataAlvo = 2
 
-const animationImage = (y,img) => {
+const animationImage = (y,img,img2) => {
 
   setTimeout(() => {
 
@@ -27,6 +28,10 @@ const animationImage = (y,img) => {
   setTimeout(() => {
     div2.style.transform = y
   },5000)
+
+  setTimeout(() => {
+    div11.style.backgroundImage = img2
+  },5500)
 }
 
 const clearAnimation = () => {
@@ -34,16 +39,16 @@ const clearAnimation = () => {
   div6.style.transform = ""
 }
 
-animationImage("rotateY(180deg)", "url(./img/5.jpg)")
+animationImage("rotateY(180deg)", "url(./img/5.jpg)", "url(./img/18.jpg)")
 clearAnimation()
 
 
 setInterval(() => {
   if(vez === 0) {
-    animationImage("rotateY(360deg)", "url(./img/17.jpg)")
+    animationImage("rotateY(360deg)", "url(./img/17.jpg)", "url(./img/19.jpg)" )
     vez++
   } else if(vez === 1) {
-    animationImage("rotateY(180deg)", "url(./img/5.jpg)")
+    animationImage("rotateY(180deg)", "url(./img/5.jpg)", "url(./img/18.jpg)")
     vez--
   }
 },5000)

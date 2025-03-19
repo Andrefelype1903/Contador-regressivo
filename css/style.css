@@ -211,6 +211,7 @@ body {
     grid-column-start: 4;
     grid-row-start: 5;
     background-image: url(../img/11.jpg);
+    transition: all 1.5s ease-in-out;
 }
 
 .div12 {
