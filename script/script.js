@@ -4,30 +4,51 @@ const div1 = document.querySelector('.div1')
 const div2 = document.querySelector('.div2')
 const div6 = document.querySelector('.div6')
 
+let vez = 0;
+
 const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
 // const dataAlvo = 2
 
-const animationImage = () => {
+const animationImage = (y,img) => {
 
   setTimeout(() => {
 
-    div1.style.transform = "rotateY(180deg)"
+    div1.style.transform = y
 
+  },2000)
+
+  setTimeout(() => {
+
+    div6.style.backgroundImage = img
+
+  },4000)
+
+  setTimeout(() => {
+    div2.style.transform = y
   },5000)
-
-  setTimeout(() => {
-
-    div6.style.backgroundImage = "url(./img/5.jpg)"
-
-  },3000)
-
-  setTimeout(() => {
-    div2.style.transform = "rotateY(180deg)"
-  },7000)
 }
 
-animationImage()
+const clearAnimation = () => {
+  div1.style.transform = ""
+  div6.style.transform = ""
+}
+
+animationImage("rotateY(180deg)", "url(./img/5.jpg)")
+clearAnimation()
+
+
+setInterval(() => {
+  if(vez === 0) {
+    animationImage("rotateY(360deg)", "url(./img/17.jpg)")
+    vez++
+  } else if(vez === 1) {
+    animationImage("rotateY(180deg)", "url(./img/5.jpg)")
+    vez--
+  }
+},5000)
+ 
+
 
 const body = document.querySelector('body')
 
