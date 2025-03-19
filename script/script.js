@@ -18,7 +18,7 @@ const animationImage = () => {
 
   setTimeout(() => {
 
-    div6.style.backgroundImage = "url(../img/5.jpg)"
+    div6.style.backgroundImage = "url(./img/5.jpg)"
 
   },3000)
 
