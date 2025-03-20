@@ -36,60 +36,6 @@ body {
     
 }
 
-/* .parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    height: 100%;
-    gap: 1px;
-}
-
-.parent div {
-    border-radius: 2px;
-    background-size: cover;
-    background-position: center;
-}
-    
-.div1 {
-    grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-    background-image: url(../img/6.jpg);
-}
-
-.div2 {
-    grid-column-start: 4;
-    background-image: url(../img/1.jpg);
-}
-
-.div3 {
-    grid-column-start: 4;
-    grid-row-start: 2;
-    background-image: url(../img/2.jpg);
-}
-
-.div4 {
-    grid-row-start: 3;
-    background-image: url(../img/3.jpg);
-
-}
-
-.div5 {
-    grid-row-start: 3;
-    background-image: url(../img/4.jpg);
-}
-
-.div6 {
-    grid-row-start: 3;
-    background-image: url(../img/5.jpg);
-    
-}
-
-.div7 {
-    grid-row-start: 3;
-    background-image: url(../img/7.jpg);
-    
-} */
-
 
 .parent {
     display: grid;
@@ -130,9 +76,6 @@ body {
     backface-visibility: hidden;
 }
 
-/* .div1:hover {
-    transform: rotateY(180deg);
-} */
 
 .div2 {
     grid-row: span 2 / span 2;
@@ -226,9 +169,8 @@ body {
 }
         
         
-
 body h2, h1 {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -241,7 +183,7 @@ body h2, h1 {
     width: 100vw;
     height: 30vh;
     justify-content: center;
-    gap: 1.3rem;
+    gap: 1rem;
     position: relative;
 
     /* background-image: url(../img/9.jpg);
@@ -250,6 +192,7 @@ body h2, h1 {
 }
 
 canvas {
+    background-color: #1fe516;
 	position: absolute;
 	top: 0;
 	left: 0;

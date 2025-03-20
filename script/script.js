@@ -7,9 +7,9 @@ const div11 = document.querySelector('.div11')
 
 let vez = 0;
 
-const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
+// const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
-// const dataAlvo = 2
+const dataAlvo = 2
 
 const animationImage = (y,img,img2) => {
 
