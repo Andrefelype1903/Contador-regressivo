@@ -68,12 +68,15 @@ body {
 .div1 .front {
     background-image: url(../img/6.jpg);
     transform: rotateY(180deg);
+    transition: all 400ms ease;
     
 }
 
 .div1 .back {
     background-image: url(../img/1.jpg);
     backface-visibility: hidden;
+    transition: all 400ms ease;
+
 }
 
 
@@ -101,6 +104,7 @@ body {
     grid-column-start: 5;
     grid-row-start: 1;
     background-image: url(../img/2.jpg);
+    transition: all 400ms ease;
 }
 
 .div4 {
@@ -135,7 +139,19 @@ body {
 .div8 {
     grid-column-start: 4;
     grid-row-start: 2;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.div8 .front {
     background-image: url(../img/8.jpg);
+}
+
+.div8 .back {
+    background-image: url(../img/20.jpg);
+    backface-visibility: hidden;
+
 }
 
 .div9 {
