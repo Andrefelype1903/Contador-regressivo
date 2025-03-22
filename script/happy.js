@@ -1,12 +1,15 @@
+const divContador = document.querySelector('.contador')
+
 var w = c.width = window.innerWidth ,
-		h = c.height = window.innerHeight * 0.30,
+		// h = c.height = window.innerHeight * 0.30,
+		h = c.height = divContador.offsetHeight,
 		ctx = c.getContext( '2d' ),
 		
 		hw = w / 2, // half-width
 		hh = h / 2,
 		
 		opts = {
-			strings: [ 'FELIZ', 'ANIVERSÁRIO!', 'MILENA'],
+			strings: [ 'FELIZ ', 'ANIVERSÁRIO! ', 'MILENA '],
 			charSize: 30,
 			charSpacing: 35,
 			lineHeight: 40,

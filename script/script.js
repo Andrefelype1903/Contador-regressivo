@@ -12,7 +12,8 @@ let vez = 0;
 
 const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
-// const dataAlvo = 2
+// const dataAlvo = new Date("mar, 22, 2025 19:45:40").getTime();
+
 
 const animationImage = (y,img,img2,img3) => {
 
@@ -40,10 +41,6 @@ const animationImage = (y,img,img2,img3) => {
   setTimeout(() => {
     div11.style.backgroundImage = img2
   },5500)
-
-  setTimeout(() => {
-    div1Bback.style.backgroundImage = "url(./img/21.jpg)"
-  },9000)
 
 }
 
