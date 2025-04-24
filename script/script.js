@@ -15,6 +15,9 @@ const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 // const dataAlvo = new Date("mar, 22, 2025 19:45:40").getTime();
 
 
+
+
+
 const animationImage = (y,img,img2,img3) => {
 
   setTimeout(() => {
@@ -74,7 +77,8 @@ const canvas = () => {
 
   const divHappy = document.createElement('div')
   divHappy.classList.add("happy");
-  contador.appendChild(divHappy)
+  body.appendChild(divHappy)
+  /* contador.appendChild(divHappy) */
 
   const newCanvas = document.createElement('canvas')
   newCanvas.id = 'c';

@@ -1,8 +1,8 @@
 const divContador = document.querySelector('.contador')
 
 var w = c.width = window.innerWidth ,
-		// h = c.height = window.innerHeight * 0.30,
-		h = c.height = divContador.offsetHeight,
+		h = c.height = window.innerHeight
+		// h = c.height = divContador.offsetHeight,
 		ctx = c.getContext( '2d' ),
 		
 		hw = w / 2, // half-width
