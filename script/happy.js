@@ -1,15 +1,20 @@
 const divContador = document.querySelector('.contador')
 
 var w = c.width = window.innerWidth ,
-		h = c.height = window.innerHeight
-		// h = c.height = divContador.offsetHeight,
+
+		/* PARA COLOCAR A DIV DE PARABENS NA TELA INTEIRA USE ESSE CÓDIGO ↓, MUDE NO SCRIPT.JS TAMBEM */
+		// h = c.height = window.innerHeight
+
+		/* PARA COLOCAR A DIV DE PARABENS NO MEIO DAS FOTOS USE ESSE CÓDIGO ↓, MUDE NO SCRIPT.JS TAMBEM */
+		h = c.height = divContador.offsetHeight,
+
 		ctx = c.getContext( '2d' ),
 		
 		hw = w / 2, // half-width
 		hh = h / 2,
 		
 		opts = {
-			strings: [ 'FELIZ ', 'ANIVERSÁRIO! ', 'MILENA '],
+			strings: [ 'FELIZ ', 'ANIVERSÁRIO! ', 'ARIADNA ♥ '],
 			charSize: 30,
 			charSpacing: 35,
 			lineHeight: 40,

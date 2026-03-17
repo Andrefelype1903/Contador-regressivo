@@ -10,9 +10,9 @@ const div1Bback = document.getElementById('div1-back')
 
 let vez = 0;
 
-const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
+// const dataAlvo = new Date("may, 04, 2025 00:00:00").getTime();
 
-// const dataAlvo = new Date("mar, 22, 2025 19:45:40").getTime();
+const dataAlvo = new Date("dec, 03, 2025 14:04:30").getTime();
 
 
 
@@ -23,7 +23,7 @@ const animationImage = (y,img,img2,img3) => {
   setTimeout(() => {
 
     div1.style.transform = y
-
+1
   },2000)
 
   setTimeout(() => {
@@ -77,8 +77,12 @@ const canvas = () => {
 
   const divHappy = document.createElement('div')
   divHappy.classList.add("happy");
-  body.appendChild(divHappy)
-  /* contador.appendChild(divHappy) */
+
+  /*PARA COLOCAR A DIV DE PARABENS APENAS NO MEIO DAS FOTOS, USE ESSE CÓDIGO E MUDE NO ARQUIVO HAPPY.JS TAMBEM!!*/
+  // body.appendChild(divHappy)
+
+  /*PARA COLOCAR A DIV DE PARABENS APENAS NO MEIO DAS FOTOS, USE ESSE CÓDIGO E MUDE NO ARQUIVO HAPPY.JS TAMBEM!!*/  
+  contador.appendChild(divHappy)
 
   const newCanvas = document.createElement('canvas')
   newCanvas.id = 'c';

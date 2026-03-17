@@ -1,103 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/happy.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/happy.css" />
 
     <script src="./script/script.js" defer></script>
     <script src="./script/happy.js" defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-    <title>Aniversário Milena</title>
-</head>
-<body>
-
+    <title>Contagem regressiva</title>
+  </head>
+  <body>
     <section class="grid-1">
-        
-<div class="parent">
+      <div class="parent">
+        <div class="div1">
+          <div class="face front"></div>
+          <div class="face back" id="div1-back"></div>
+        </div>
 
-    <div class="div1">
-        <div class="face front"></div>
-        <div class="face back" id="div1-back"></div>
-    </div>
+        <div class="div2">
+          <div class="face front"></div>
+          <div class="face back"></div>
+        </div>
 
-    <div class="div2">
-        <div class="face front"></div>
-        <div class="face back"></div>
-    </div>
-    
-    <div class="div3"></div>
-    <div class="div4"></div>
-    <div class="div5"></div>
-    <div class="div6"></div>
-    <div class="div7"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
 
-    <div class="div8">
-        <div class="face front"></div>
-        <div class="face back"></div>
-    </div>
+        <div class="div8">
+          <div class="face front"></div>
+          <div class="face back"></div>
+        </div>
 
-    <div class="div9"></div>
-    <div class="div10"></div>
-    <div class="div11"></div>
-    <div class="div12"></div>
-</div>
-    
-    
-
+        <div class="div9"></div>
+        <div class="div10"></div>
+        <div class="div11"></div>
+        <div class="div12"></div>
+      </div>
     </section>
-
 
     <section class="contador">
+      <div>
+        <h1>Aniversário da Milena</h1>
+        <h2>Faltam apenas:</h2>
+      </div>
 
-        <div>
-            <h1>Aniversário da Milena</h1>
-            <h2>Faltam apenas:</h2>
+      <div class="div-timer">
+        <div class="timer">
+          <p id="dias">00</p>
+          <span>Dias</span>
         </div>
-
-
-        <div class="div-timer">
-
-            <div class="timer" >
-                <p id="dias">00</p>
-                <span>Dias</span>
-            </div>
-            <div class="timer">
-                <p id="horas">00</p>
-                <span>Horas</span>
-            </div>
-            <div class="timer">
-                <p id="minutos">00</p>
-                <span>Minutos</span>
-            </div>
-            <div class="timer">
-                <p id="segundos">00</p>
-                <span>Segundos</span>
-            </div>
-
+        <div class="timer">
+          <p id="horas">00</p>
+          <span>Horas</span>
         </div>
-
-        <div>
-            <h3>Ja comprou o presente dela?</h3>
+        <div class="timer">
+          <p id="minutos">00</p>
+          <span>Minutos</span>
         </div>
+        <div class="timer">
+          <p id="segundos">00</p>
+          <span>Segundos</span>
+        </div>
+      </div>
 
-        <!-- <div class="happy">
+      <div>
+        <h3>Ja comprou o presente dela?</h3>
+      </div>
+
+      <!-- <div class="happy">
             <canvas id="c"></canvas>
         </div> -->
-
     </section>
 
-
-
-
-    <section class="grid-2">
-
-    </section>
-
-
-    
-</body>
+    <section class="grid-2"></section>
+  </body>
 </html>
