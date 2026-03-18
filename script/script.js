@@ -1,12 +1,12 @@
-const contador = document.querySelector('.contador')
+const contador = document.querySelector(".contador");
 
-const div1 = document.querySelector('.div1')
-const div2 = document.querySelector('.div2')
-const div3 = document.querySelector('.div3')
-const div6 = document.querySelector('.div6')
-const div11 = document.querySelector('.div11')
-const div8 = document.querySelector('.div8')
-const div1Bback = document.getElementById('div1-back')
+const div1 = document.querySelector(".div1");
+const div2 = document.querySelector(".div2");
+const div3 = document.querySelector(".div3");
+const div6 = document.querySelector(".div6");
+const div11 = document.querySelector(".div11");
+const div8 = document.querySelector(".div8");
+const div1Bback = document.getElementById("div1-back");
 
 let vez = 0;
 
@@ -14,126 +14,125 @@ let vez = 0;
 
 const dataAlvo = new Date("dec, 03, 2025 14:04:30").getTime();
 
-
-
-
-
-const animationImage = (y,img,img2,img3) => {
+const animationImage = (y, img, img2, img3) => {
+  setTimeout(() => {
+    div1.style.transform = y;
+    1;
+  }, 2000);
 
   setTimeout(() => {
-
-    div1.style.transform = y
-1
-  },2000)
+    div3.style.backgroundImage = img3;
+  }, 3000);
 
   setTimeout(() => {
-    div3.style.backgroundImage = img3
-  },3000)
+    div6.style.backgroundImage = img;
+    div8.style.transform = y;
+  }, 4000);
 
   setTimeout(() => {
-
-    div6.style.backgroundImage = img
-    div8.style.transform = y
-
-  },4000)
+    div2.style.transform = y;
+  }, 5000);
 
   setTimeout(() => {
-    div2.style.transform = y
-  },5000)
-
-  setTimeout(() => {
-    div11.style.backgroundImage = img2
-  },5500)
-
-}
+    div11.style.backgroundImage = img2;
+  }, 5500);
+};
 
 const clearAnimation = () => {
-  div1.style.transform = ""
-  div6.style.transform = ""
-  div1Bback.style.transform = ""
-}
+  div1.style.transform = "";
+  div6.style.transform = "";
+  div1Bback.style.transform = "";
+};
 
-animationImage("rotateY(180deg)", "url(./img/5.jpg)", "url(./img/18.jpg)", "url(./img/22.jpg)")
-clearAnimation()
-
+animationImage(
+  "rotateY(180deg)",
+  "url(./img/5.webp)",
+  "url(./img/18.webp)",
+  "url(./img/22.webp)",
+);
+clearAnimation();
 
 setInterval(() => {
-  if(vez === 0) {
-    animationImage("rotateY(360deg)", "url(./img/17.jpg)", "url(./img/19.jpg)", "url(./img/2.jpg)" )
-    vez++
-  } else if(vez === 1) {
-    animationImage("rotateY(180deg)", "url(./img/5.jpg)", "url(./img/18.jpg)", "url(./img/22.jpg)")
-    vez--
+  if (vez === 0) {
+    animationImage(
+      "rotateY(360deg)",
+      "url(./img/17.webp)",
+      "url(./img/19.webp)",
+      "url(./img/2.webp)",
+    );
+    vez++;
+  } else if (vez === 1) {
+    animationImage(
+      "rotateY(180deg)",
+      "url(./img/5.webp)",
+      "url(./img/18.webp)",
+      "url(./img/22.webp)",
+    );
+    vez--;
   }
-},5000)
- 
+}, 5000);
 
-
-const body = document.querySelector('body')
+const body = document.querySelector("body");
 
 console.log(dataAlvo);
 
 const canvas = () => {
-
-  const divHappy = document.createElement('div')
+  const divHappy = document.createElement("div");
   divHappy.classList.add("happy");
 
   /*PARA COLOCAR A DIV DE PARABENS APENAS NO MEIO DAS FOTOS, USE ESSE CÓDIGO E MUDE NO ARQUIVO HAPPY.JS TAMBEM!!*/
   // body.appendChild(divHappy)
 
-  /*PARA COLOCAR A DIV DE PARABENS APENAS NO MEIO DAS FOTOS, USE ESSE CÓDIGO E MUDE NO ARQUIVO HAPPY.JS TAMBEM!!*/  
-  contador.appendChild(divHappy)
+  /*PARA COLOCAR A DIV DE PARABENS APENAS NO MEIO DAS FOTOS, USE ESSE CÓDIGO E MUDE NO ARQUIVO HAPPY.JS TAMBEM!!*/
+  contador.appendChild(divHappy);
 
-  const newCanvas = document.createElement('canvas')
-  newCanvas.id = 'c';
+  const newCanvas = document.createElement("canvas");
+  newCanvas.id = "c";
 
-  divHappy.appendChild(newCanvas)
-}
+  divHappy.appendChild(newCanvas);
+};
 
 const contagem = () => {
-
   const dataAtual = new Date().getTime();
   const tempoRestante = dataAlvo - dataAtual;
 
-
-  if(tempoRestante <= 0) {
-
-
-    canvas()
-
+  if (tempoRestante <= 0) {
+    canvas();
 
     clearInterval(intervalo);
 
-    location.reload()
-
-
+    location.reload();
   } else {
+    const dias = Math.floor(tempoRestante / (1000 * 60 * 60 * 24))
+      .toString()
+      .padStart(2, "0");
 
-    const dias = Math.floor(tempoRestante / (1000 * 60  *  60  * 24)).toString().padStart(2, '0')
-  
-    const horas = Math.floor((tempoRestante % (1000 * 60  * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0')
-  
-    const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-  
-    const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000).toString().padStart(2, '0')
-  
-    console.log(dias + '/' + horas + '/' + minutos + '/' + segundos)
-    
-  
-    document.querySelector('#dias').innerHTML = dias
-    document.querySelector('#horas').innerHTML = horas
-    document.querySelector('#minutos').innerHTML = minutos
-    document.querySelector('#segundos').innerHTML = segundos
-    document.querySelector('#dias').innerHTML = dias
+    const horas = Math.floor(
+      (tempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    )
+      .toString()
+      .padStart(2, "0");
+
+    const minutos = Math.floor((tempoRestante % (1000 * 60 * 60)) / (1000 * 60))
+      .toString()
+      .padStart(2, "0");
+
+    const segundos = Math.floor((tempoRestante % (1000 * 60)) / 1000)
+      .toString()
+      .padStart(2, "0");
+
+    console.log(dias + "/" + horas + "/" + minutos + "/" + segundos);
+
+    document.querySelector("#dias").innerHTML = dias;
+    document.querySelector("#horas").innerHTML = horas;
+    document.querySelector("#minutos").innerHTML = minutos;
+    document.querySelector("#segundos").innerHTML = segundos;
+    document.querySelector("#dias").innerHTML = dias;
   }
+};
 
-
-}
-
-contagem()
+contagem();
 
 const intervalo = setInterval(() => {
-
-  contagem()
-  
+  contagem();
 }, 1000);
